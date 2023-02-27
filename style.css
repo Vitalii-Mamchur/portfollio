@@ -109,17 +109,17 @@ body {
 }
 
 .flag {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 100%;
-  background-color: rgb(241, 241, 39);
-  z-index: 9999;
+  width: 120px;
+  height: 42px;
 }
-.flag .flag-blue {
+.flag .blue {
   height: 50%;
   background-color: #0a89a8;
+}
+
+.flag .yellow {
+  height: 50%;
+  background-color: yellow;
 }
 
 .header {
@@ -760,7 +760,7 @@ body {
 
 .close:hover,
 .close:focus {
-  color: #f10909;
+  color: #f2605b;
   text-decoration: none;
   cursor: pointer;
 }
@@ -799,6 +799,10 @@ body {
 
 .modal-body > .contacts a:hover {
   color: #f2605b;
+}
+
+.modal-body .contacts-item {
+  margin-top: 20px;
 }
 
 .modal-footer {
