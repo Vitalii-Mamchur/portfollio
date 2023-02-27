@@ -177,6 +177,7 @@ body {
   color: #161513;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .nav-container .nav-container__item:hover {
   color: #e73a3a;
@@ -544,7 +545,22 @@ body {
 .portfolio .portfolio-list__item .portfolio-img img {
   height: 100%;
   width: 100%;
+  border: none;
 }
+
+.portfolio .portfolio-list__item .portfolio-img img {
+  border: 1px solid grey;
+}
+
+.portfolio .portfolio-list__item .portfolio-img img:hover {
+  transform: scale(1.015);
+  outline: none;
+}
+
+.portfolio .portfolio-list__item .portfolio-img:nth-last-child(odd):hover {
+  transform: skew(0, 5deg);
+}
+
 .portfolio .portfolio-list__item p {
   font-weight: 400;
   font-size: 20px;
@@ -666,4 +682,129 @@ body {
   color: azure;
   padding-right: 5px;
 }
+
+/*  -----------Modal--------------- */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #f3f7f7;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  min-width: 465px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+@media (min-width: 749px) {
+  .modal-content {
+    padding: 40px;
+    width: 530px;
+  }
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  right: 15px;
+  top: -10px;
+  color: rgb(8, 8, 9);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 15px;
+  transition: all 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #f10909;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 30px;
+}
+
+.modal-body > .contacts {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.modal-body .bi-linkedin,
+.modal-body .bi-telephone-fill,
+.modal-body .bi-envelope-fill,
+.modal-body .bi-telegram,
+.modal-body .bi-github {
+  color: #494646;
+  font-size: 25px;
+}
+
+.modal-body > .contacts i,
+.modal-body > .contacts span,
+.modal-body > .contacts a {
+  color: #494646;
+  font-size: 25px;
+  transition: all 0.3s;
+}
+
+.modal-body > .contacts a:hover {
+  color: #f2605b;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
 /*# sourceMappingURL=style.css.map */
