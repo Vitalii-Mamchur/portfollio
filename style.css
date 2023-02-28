@@ -111,6 +111,7 @@ body {
 .flag {
   width: 120px;
   height: 42px;
+  box-shadow: 0px 3px 4px #161513;
 }
 .flag .blue {
   height: 50%;
@@ -577,6 +578,7 @@ body {
 }
 .portfolio .portfolio-list__item a {
   text-decoration: none;
+  border-radius: 0.4em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -591,6 +593,7 @@ body {
   height: 42px;
   border: 1px solid #161513;
   -webkit-transition: all 0.3s;
+  box-shadow: 0px 3px 4px #161513;
   transition: all 0.3s;
 }
 .portfolio .portfolio-list__item .portfolio-info a:hover {
