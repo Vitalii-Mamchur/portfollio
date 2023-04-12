@@ -555,6 +555,8 @@ body {
 
 .portfolio .portfolio-list__item .portfolio-img img {
   border: 1px solid grey;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
 
 .portfolio .portfolio-list__item .portfolio-img img:hover {
